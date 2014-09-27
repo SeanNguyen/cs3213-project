@@ -47,7 +47,7 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#">Run</a></li>
-                        <li><a href="#">Save</a></li>
+                        <li><a href="#" id="save-data">Save</a></li>
                         <li><a href="#">Clear all</a></li>
                     </ul>
                 </div>
@@ -64,20 +64,47 @@
                     </div>
                     <div class="panel-body">
                         <div class="command-object-wrapper">
-                        <div class="input-group command-object move-command" data-type="move" data-direction="up" data-steps="0">
-                            <span class="input-group-addon">Move </span>
-                            <div class="input-group-btn">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-option="move-direction">Up <span class="caret"></span></button>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Up</a></li>
-                                    <li><a href="#">Down</a></li>
-                                    <li><a href="#">Left</a></li>
-                                    <li><a href="#">Right</a></li>
-                                </ul>
+                            <div class="input-group command-object move-command" data-type="move" data-direction="up" data-steps="0">
+                                <span class="input-group-addon">Move </span>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default " data-toggle="dropdown" data-option="move-direction">
+                                    <span class="text-only">Up</span> </button>
+                                   
+                                </div>
+                                <input type="text" class="form-control" placeholder="# of steps">
                             </div>
-                            <input type="text" class="form-control" placeholder="# of steps">
+                            <br />
+                            <div class="input-group command-object move-command" data-type="move" data-direction="down" data-steps="0">
+                                <span class="input-group-addon">Move </span>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default " data-toggle="dropdown" data-option="move-direction">
+                                    <span class="text-only">Down</span> </button>
+                                   
+                                </div>
+                                <input type="text" class="form-control" placeholder="# of steps">
+                            </div>
+                            <br />
+                            <div class="input-group command-object move-command" data-type="move" data-direction="left" data-steps="0">
+                                <span class="input-group-addon">Move </span>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default " data-toggle="dropdown" data-option="move-direction">
+                                    <span class="text-only">Left</span> </button>
+                                   
+                                </div>
+                                <input type="text" class="form-control" placeholder="# of steps">
+                            </div>
+                            <br />
+                            <div class="input-group command-object move-command" data-type="move" data-direction="right" data-steps="0">
+                                <span class="input-group-addon">Move </span>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default " data-toggle="dropdown" data-option="move-direction">
+                                    <span class="text-only">Right</span> </button>
+                                   
+                                </div>
+                                <input type="text" class="form-control" placeholder="# of steps">
+                            </div>
+
                         </div>
-                    </div>
 
                     </div>
                 </div>
@@ -126,7 +153,7 @@
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/workspace.js"></script>
