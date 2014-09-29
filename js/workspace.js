@@ -1,4 +1,5 @@
 var workspace = [];
+workspace.numLines = 0;
 
 $(document).ready(function(){
     //From command palette, we just need to clone
@@ -36,18 +37,26 @@ var listenDrag = function(){
             //Save data
             var data = $(event.target).find('.command-object').data();
             var rowData = $(this).data();
-            console.log(rowData);
+            //console.log(rowData);
             //console.log(lineData);
+            workspace.numLines+=1;
             workspace[workspace.length]={
-                line: rowData.line,
+                line: workspace.numLines,
                 nestLevel: rowData.nestlevel,
                 type: data.type,
                 direction: data.direction,
                 steps: data.steps
             };
 
+
+
+            //Update row number
+            $(this).siblings('.line-number').find('h4').html(workspace.numLines);
+
             console.log("Current workspace state: " + JSON.stringify(workspace));
 
+            //Re-target all elements (because new elements are created)
+            listenDrag();
         }
     });
 }
